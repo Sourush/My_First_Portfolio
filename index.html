@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sourush — Portfolio</title>
+  <meta name="description" content="Sourush — Android Dev, AI Creator (S.O.U.R.V.I.S.), Storyteller" />
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#06b6d4;--muted:#94a3b8;--glass:rgba(255,255,255,0.04)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;background:linear-gradient(180deg,#071029 0%,#071427 60%);color:#e6eef6;line-height:1.5}
+    .container{max-width:1100px;margin:40px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:center;gap:12px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.06)}
+    header .brand{font-size:22px;font-weight:800;color:#fff;text-align:center}
+    header .tagline{font-size:13px;color:var(--muted)}
+    nav{text-align:center;margin-top:10px}
+    nav a{color:var(--muted);text-decoration:none;margin:0 12px;transition:0.3s}
+    nav a:hover{color:var(--accent)}
+    .hero{margin-top:32px;text-align:center}
+    .hero h1{font-size:32px;margin-bottom:8px}
+    .hero p.lead{color:var(--muted);margin:0 0 16px;font-size:16px}
+    .cta{display:flex;gap:12px;justify-content:center;margin-top:14px}
+    .btn{background:linear-gradient(90deg,var(--accent),#7c3aed);padding:10px 14px;border-radius:10px;color:#021228;font-weight:700;border:none;cursor:pointer;transition:0.3s}
+    .btn:hover{opacity:0.85;transform:translateY(-2px)}
+    .secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);padding:10px 12px;border-radius:10px;transition:0.3s}
+    .secondary:hover{border-color:var(--accent);color:#fff}
+    .skills{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:12px}
+    .pill{background:var(--glass);padding:8px 10px;border-radius:999px;color:var(--muted);font-weight:600;font-size:13px}
+    .project-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:18px}
+    .project{padding:18px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);transition:0.3s}
+    .project:hover{transform:translateY(-4px);box-shadow:0 8px 28px rgba(2,6,23,0.5)}
+    .project h3{margin:0 0 6px}
+    .meta{color:var(--muted);font-size:13px}
+    .about-contact{display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:22px}
+    footer{text-align:center;color:var(--muted);margin-top:28px;padding:20px;font-size:13px}
+    pre{background:rgba(0,0,0,0.2);padding:10px;border-radius:8px;color:#cfefff;overflow:auto}
+    @media(max-width:880px){.about-contact{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">Sourush</div>
+    </header>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <section class="hero">
+      <h1>Hi — I'm Sourush. I build apps, AI assistants, and stories.</h1>
+      <p class="lead">Creator of Android apps, S.O.U.R.V.I.S. assistant, and writer of 8 movie scripts. <br> "I turn my pain into power and creation." <br> "The Broken Angel who turn pain to power."</p>
+      <div class="cta">
+        <button class="btn" onclick="openLink('https://github.com/Sourush')">View GitHub</button>
+        <button class="secondary" onclick="openLink('mailto:sourushg97@gmail.com')">Email me</button>
+      </div>
+      <div class="skills">
+        <div class="pill">Android (Kotlin)</div>
+        <div class="pill">Python</div>
+        <div class="pill">Speech & NLP</div>
+        <div class="pill">LLMs (gpt4all, llama)</div>
+        <div class="pill">Game Design</div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 style="margin:20px 0 12px;text-align:center">Featured Projects</h2>
+      <div class="project-list">
+        <article class="project card">
+          <h3>Android App — (FYA)</h3>
+          <div class="meta">15 days → Production-ready • Screenshots, APK, Play-store draft</div>
+          <p style="margin-top:8px;color:var(--muted)">Features: offline Memory manager, NO ads, smooth UI, no-crash, Pro Features free, export PDF, Reminders, music player, and much more.</p>
+          <div style="margin-top:8px">
+            <button class="btn" onclick="openLink('https://github.com/Sourush/My-First-App/releases/download/v1.2.0/app-release.apk')">Download APK</button>
+            <button class="secondary" onclick="openLink('https://drive.google.com/drive/folders/15rG7tWy4NXddknk0DZhz8fpEZap8vvl8')">See Demo</button>
+          </div>
+        </article>
+
+        <article class="project card">
+          <h3>S.O.U.R.V.I.S. — Personal AI</h3>
+          <div class="meta">Voice assistant • Speech recognition • Automation • Memory</div>
+          <p style="margin-top:8px;color:var(--muted)">Uses local LLM + speech pipeline. Features: wake-word, conversation mode + Command Mode, automation commands, PPT generator, motivational quotes, racing game controls, and more.</p>
+          <div style="margin-top:8px">
+            <button class="btn" onclick="openLink('#')">Source Code Soon</button>
+            <button class="secondary" onclick="openLink('https://drive.google.com/file/d/1JwgyUzqtS8biKcED8MElnp2WOliabBJ2/view?usp=drivesdk')">Run Demo</button>
+          </div>
+        </article>
+
+        <article class="project card">
+          <h3>Anime — "The Crystalline Saga"</h3>
+          <div class="meta">Story • Characters • Scripts</div>
+          <p style="margin-top:8px;color:var(--muted)">An anime based on courage, love, and sacrifice. Inspired by my own life, featuring Arion, Umbarion, and Elara. Coming soon.</p>
+          <div style="margin-top:8px">
+            <button class="btn" onclick="openLink('#')">Coming Soon</button>
+            <button class="secondary" onclick="openLink('#')">Source Soon</button>
+          </div>
+        </article>
+
+        <article class="project card">
+          <h3>Scripts & Movie Ideas</h3>
+          <div class="meta">8 scripts • Dialogues • Prologues</div>
+          <p style="margin-top:8px;color:var(--muted)">Samples, synopses, and dialogue snippets — available on request or as a downloadable PDF portfolio.</p>
+          <div style="margin-top:8px">
+            <button class="btn" onclick="openLink('#')">Download PDF Soon</button>
+            <button class="secondary" onclick="openLink('https://drive.google.com/file/d/1ZHS5VMJ5SE8fsINqTa3VFNNXOnSI-fTw/view?usp=drivesdk')">Read A Sample</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="about-contact">
+      <div class="card">
+        <h2>About Me</h2>
+        <p class="lead">I build real apps and intelligent assistants. I write stories and design games. I love turning strong emotions into creative power. I turn my pain into creation.</p>
+        <h3 style="margin-top:12px">How to use this portfolio</h3>
+        <ol style="color:var(--muted)">
+          <li>Click download to try my Android app, or view a demo first.</li>
+          <li>See a demo of my Sourvis AI assistant.</li>
+          <li>Contact me for collaboration, suggestions, and guidance.</li>
+        </ol>
+      </div>
+
+      <div id="contact" class="card">
+        <h2>Contact</h2>
+        <p class="meta">Want me to build something, collaborate, or just say hi?</p>
+        <form action="https://formspree.io/f/xovkqwvz" method="POST">
+          <label style="display:block;margin-bottom:8px;color:var(--muted)">Name</label>
+          <input type="text" name="name" placeholder="Your name" required 
+                 style="width:100%;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
+
+          <label style="display:block;margin:12px 0 8px;color:var(--muted)">Email</label>
+          <input type="email" name="email" placeholder="Your email" required
+                 style="width:100%;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
+
+          <label style="display:block;margin:12px 0 8px;color:var(--muted)">Message</label>
+          <textarea name="message" placeholder="Write a short message" required
+                    style="width:100%;height:100px;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit"></textarea>
+
+          <button type="submit" class="btn" style="margin-top:10px">Send</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div>Made by Sourush — Turn Your pain into power : © 2025</div>
+    </footer>
+  </div>
+  <script>
+    function openLink(url){ if(url.startsWith('#')){ location.href = url; } else { window.open(url,'_blank') }}
+  </script>
+</body>
+</html>
